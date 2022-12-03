@@ -1,30 +1,23 @@
-var button = document.getElementById("enter");
-var input = document.getElementById("userinput");
-var ol = document.querySelector("ol");
+var _ = require('lodash');
 
-function inputLength() {
-    return input.value.length;
-}
-function createListElement() {
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(input.value));
-    ol.appendChild(li);
-    input.value = "";
-}
+var array = [1,2,3,4,5,6,7];
+console.log('answer', _.without(array, 4));
 
-function addListAfterClick() {
-        if( inputLength() > 0) {
-            createListElement();
-        }
-}
-function addListAfterKeypress(event) {
-    
-        if(inputLength() > 0 && event.keyCode === 13) {
-            createListElement();
-        }
+var css = document.querySelector("h3");
+var color1 = document.querySelector(".color1");
+var color2 = document.querySelector(".color2");
+var body = document.getElementById("gradient");
+var h3 = document.getElementsByTagName("h3")[0];
+
+h3.textContent = "linear-gradient(to right," + color1.value + ", " + color2.value + ")";
+
+
+
+function setGradient() {
+        body.style.background = "linear-gradient(to right," + color1.value + ", " + color2.value + ")";
+        css.textContent = body.style.background + ";";
 }
 
-button.addEventListener("click", addListAfterClick)
+color1.addEventListener("input", setGradient)
 
-
-input.addEventListener("keypress", addListAfterKeypress)
+color2.addEventListener("input", setGradient)

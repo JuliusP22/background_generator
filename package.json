@@ -1,0 +1,23 @@
+{
+  "name": "background_generator",
+  "version": "1.0.0",
+  "description": "html, css and JS projet that generate a custom background from 2 HEX colors entries",
+  "main": "script.js",
+  "scripts": {
+    "build": "browserify script.js > bundle.js && live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuliusP22/background_generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuliusP22/background_generator/issues"
+  },
+  "homepage": "https://github.com/JuliusP22/background_generator#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {}
+}
